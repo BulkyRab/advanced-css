@@ -1,0 +1,178 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485 The most advanced and modern CSS course on the internet master flexbox, CSS Grid, responsive design, and so much more.
+
+*/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /*font-size: 16px;*/
+  color: #777;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.header__logo-container {
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.h1-headder {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+
+.header--main-title {
+  display: block;
+  letter-spacing: 3.5rem;
+  font-weight: 400;
+  font-size: 6rem;
+  animation: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.header--sub-title {
+  display: block;
+  letter-spacing: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+  animation: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  display: inline-block;
+  border-radius: 5rem;
+}
+
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 5rem;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animation {
+  animation: moveInBottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}/*# sourceMappingURL=main.css.map */
